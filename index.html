@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to HTML Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Text to HTML Converter</h2>
+
+      <form id="textForm">
+        <div class="form-group">
+          <label for="language">Language (required):</label>
+          <select id="language" required>
+            <option value="ar">Arabic</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="author">Author (required):</label>
+          <input type="text" id="author" required />
+        </div>
+
+        <div class="form-group">
+          <label for="title">Title (optional):</label>
+          <input type="text" id="title" />
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <select id="country">
+            <option value="Netherlands">The Netherlands</option>
+            <option value="Lebanon">لبنان</option>
+            <option value="Egypt">مصر</option>
+            <option value="Other">Other</option>
+          </select>
+          <input
+            type="text"
+            id="countryOther"
+            class="hidden"
+            placeholder="Enter custom country"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="city">City:</label>
+          <select id="city">
+            <option value="Rotterdam">Rotterdam</option>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Beirut">بيروت</option>
+            <option value="Naguib_Mahfouz_village">قرية نجيب محفوط</option>
+            <option value="Other">Other</option>
+          </select>
+          <input
+            type="text"
+            id="cityOther"
+            class="hidden"
+            placeholder="Enter custom city"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date (optional):</label>
+          <input type="date" id="date" />
+        </div>
+
+        <div class="form-group">
+          <label for="text">Text (required):</label>
+          <textarea id="text" required></textarea>
+        </div>
+
+        <div class="button-container">
+          <button type="button" id="convertBtn">Convert to HTML</button>
+          <button type="button" id="previewBtn" class="hidden">Preview</button>
+          <button type="button" id="downloadBtn" class="hidden">
+            Download
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
